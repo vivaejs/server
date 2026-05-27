@@ -24,7 +24,6 @@
     }
   },
   "scripts": {
-    "test": "node tests/index.test.js",
-    "rss": "node tests/rss.js"
+    "test": "node tests/index.test.js"
   }
 }

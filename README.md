@@ -16,16 +16,6 @@ View the [docs](https://github.com/sudo-njr/vivae/blob/main/docs/index.md).
 
 And guess what? It's packaged smaller than 20kb!
 
-## Performance
-
-Vivae has a lower memory usage in basic server benchmarks.
-
-- Vivae v1.1.0: ~31.55 MB RSS
-- Express v5.1.0: ~43.45 MB
-- Koa v3.0.0: ~43.71 MB
-
-Tracked using Node's `process.memoryUsage()` for basic server initializations.
-
 ## Installation
 
 ```
