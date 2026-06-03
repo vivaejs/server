@@ -6,8 +6,8 @@ const port = 3000;
 
 const app = vivae();
 
-app.use("/api", "GET", (vobj) => {
-  vobj.send([{ currentPath: vobj.path }]);
+app.use("/api", "GET", (v) => {
+  return v.send([{ currentPath: v.path }]);
 });
 
 app.listen(port, () => {
