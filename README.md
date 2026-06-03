@@ -32,8 +32,8 @@ import vivae from "vivae";
 const app = vivae();
 const port = 3000;
 
-app.use("/", "GET", (vobj) => {
-  vobj.send("Hello World!");
+app.use("/", ["GET", "POST"], (v) => {
+  v.send("Hello World!");
 });
 
 app.listen(port, () => {
