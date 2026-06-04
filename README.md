@@ -2,7 +2,7 @@
 
 **Bring your HTTP server to life.**
 
-Vivae is a lightweight, dependency-free Node.js framework built to help you quickly create and manage HTTP servers using a custom routing engine, middleware, and plugin system designed for minimal code, control, and your server's architecture.
+Vivae is a lightweight, dependency-free framework built to help you quickly create and manage HTTP servers using a custom routing engine, middleware, and plugin system designed for minimal code, control, and your server's architecture.
 
 View the [docs](https://github.com/sudo-njr/vivae/blob/main/docs/index.md).
 
