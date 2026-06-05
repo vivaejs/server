@@ -13,7 +13,7 @@ cd vivae-app
 
 ## Installing
 
-Vivae is a package on npm, you'll need to have [Node.js 16](https://nodejs.org/en/download) or higher for it to function properly. Then install Vivae by using:
+Vivae is a package on npm, you'll need to have [Node.js 18](https://nodejs.org/en/download) or higher for it to function properly. Then install Vivae by using:
 
 ```
 npm install vivae
