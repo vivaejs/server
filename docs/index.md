@@ -8,5 +8,5 @@ Vivae is an extremely lightweight, zero-dependency Node.js framework for buildin
 
 ## Overview
 
-- [Getting Started](https://github.com/sudo-njr/vivae/blob/main/docs/getting-started.md): Learn the basics and running your first server.
-- [API Reference](https://github.com/sudo-njr/vivae/blob/main/docs/api.md): Understand every feature Vivae has to offer.
+- [Getting Started](https://github.com/vivaejs/vivae/blob/main/docs/getting-started.md): Learn the basics and running your first server.
+- [API Reference](https://github.com/vivaejs/vivae/blob/main/docs/api.md): Understand every feature Vivae has to offer.
