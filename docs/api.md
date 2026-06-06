@@ -167,36 +167,27 @@ v.respond(200, { "Content-Type": "application/json" });
 
 # Plugin API
 
-## Create Plugin - createPlugin()
+## Creating Plugins
 
-```javascript
-import { createPlugin } from "vivae/plugins";
+Create a function, add any arguments and return an object that defines the route.
 
-createPlugin(FUNCTION);
-```
-
-- `FUNCTION`: `((...args) => (server) => { path?, method?, middleware })` Add any arguments and return an object that defines the route.
-  - `path` (optional)
-  - `method` (optional)
-  - `middleware` (required)
-
-
+- `path` (optional)
+- `method` (optional)
+- `middleware` (required)
 
 ### Example
 
 ```javascript
-import { createPlugin } from "vivae/plugins";
-
-const myPlugin = createPlugin((message) => {
+const myPlugin = function (message) {
   console.log(message);
-  return (server) => ({
+  return {
     path: "/api/user/:userId",
     method: "POST",
     middleware: function (v) {
       v.send({ message, userId: v.params.userId });
     },
-  });
-});
+  };
+};
 
 export default myPlugin;
 ```
@@ -209,7 +200,7 @@ import { serve } from "vivae/plugins";
 
 const app = vivae();
 
-app.use(serve(OPTIONS));
+app.plugin(serve(OPTIONS));
 ```
 
 - `OPTIONS` (optional): You can pass an object to change how static serving behaves.
