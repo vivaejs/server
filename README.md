@@ -34,9 +34,14 @@ app.use("/", ["GET", "POST"], (v) => {
   return v.send("Hello World!");
 });
 
+// Node.js
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+// Edge
+export default {
+  fetch: app.fetch
+}
 ```
 
 If you're using CommonJS, simply use `require` instead of `import`:
