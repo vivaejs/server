@@ -51,10 +51,6 @@ interface VivaeObject {
 type Middleware = (v: VivaeObject) => void;
 
 interface VivaeConfig {
-  debug?: {
-    logging?: boolean;
-    warnings?: boolean;
-  };
   allowQueries?: boolean;
 }
 
