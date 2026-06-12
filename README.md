@@ -17,7 +17,7 @@ And guess what? It's packaged smaller than 20kb!
 ## Installation
 
 ```
-npm install vivae
+npm install @vivaejs/core
 ```
 
 ## Usage Example
