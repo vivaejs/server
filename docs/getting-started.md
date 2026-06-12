@@ -24,7 +24,7 @@ npm install vivae
 Create a file named `index.js` with this example code to understand it's functionality.
 
 ```javascript
-import vivae from "vivae";
+import vivae from "@vivaejs/core";
 
 const app = vivae();
 
