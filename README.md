@@ -25,7 +25,7 @@ npm install @vivaejs/core
 ESM:
 
 ```javascript
-import vivae from "vivae";
+import vivae from "@vivaejs/core";
 
 const app = vivae();
 const port = 3000;
@@ -47,7 +47,7 @@ export default {
 If you're using CommonJS, simply use `require` instead of `import`:
 
 ```javascript
-const vivae = require("vivae");
+const vivae = require("@vivaejs/core");
 ```
 
 ## License
