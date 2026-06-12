@@ -22,8 +22,6 @@ npm install @vivaejs/core
 
 ## Usage Example
 
-ESM:
-
 ```javascript
 import vivae from "@vivaejs/core";
 
@@ -42,12 +40,6 @@ app.listen(port, () => {
 export default {
   fetch: app.fetch,
 };
-```
-
-If you're using CommonJS, simply use `require` instead of `import`:
-
-```javascript
-const vivae = require("@vivaejs/core");
 ```
 
 ## License
