@@ -17,13 +17,13 @@ And guess what? It's packaged smaller than 20kb!
 ## Installation
 
 ```
-npm install @vivaejs/core
+npm install @vivaejs/server
 ```
 
 ## Usage Example
 
 ```javascript
-import vivae from "@vivaejs/core";
+import vivae from "@vivaejs/server";
 
 const app = vivae();
 const port = 3000;
