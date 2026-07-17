@@ -30,7 +30,7 @@ type Method =
   | "SEARCH";
 
 interface VivaeObject {
-  url: string;
+  url: URL;
   path: string;
   query: { [key: string]: string | number | boolean } | {};
   params: { [param: string]: string } | {};
