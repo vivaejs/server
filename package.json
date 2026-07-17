@@ -1,5 +1,5 @@
 {
-  "name": "@vivaejs/core",
+  "name": "@vivaejs/server",
   "type": "commonjs",
   "version": "0.1.0-alpha.0",
   "engines": {
