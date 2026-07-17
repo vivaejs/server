@@ -4,7 +4,7 @@ Welcome to the official Vivae documentation!
 
 ## What is Vivae?
 
-Vivae is an extremely lightweight, zero-dependency Node.js framework for building HTTP servers including, middleware support, plugin creation, static file serving, and more.
+Vivae is a lightweight, zero-dependency framework for building HTTP servers including, middleware support, plugin creation, static file serving, and more.
 
 ## Overview
 
