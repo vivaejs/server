@@ -2,7 +2,7 @@
 
 Vivae is a lightweight, dependency-free framework built to help you quickly create and manage HTTP servers using a custom routing engine, middleware, and plugin system designed for minimal code, control, and your server's architecture.
 
-View the [docs](https://github.com/vivaejs/vivae/blob/main/docs/index.md).
+View the [docs](https://github.com/vivaejs/server/blob/main/docs/index.md).
 
 ## Why is it unique?
 
@@ -44,4 +44,4 @@ export default {
 
 ## License
 
-[MIT](https://github.com/sudo-njr/vivae/blob/main/LICENSE)
+[MIT](https://github.com/vivaejs/server/blob/main/LICENSE)
