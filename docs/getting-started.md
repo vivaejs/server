@@ -16,7 +16,7 @@ cd vivae-app
 Vivae is a package on npm, you'll need to have [Node.js 18](https://nodejs.org/en/download) or higher for it to function properly. Then install Vivae by using:
 
 ```
-npm install vivae
+npm install @vivaejs/server
 ```
 
 ## Example App
@@ -24,7 +24,7 @@ npm install vivae
 Create a file named `index.js` with this example code to understand it's functionality.
 
 ```javascript
-import vivae from "@vivaejs/core";
+import vivae from "@vivaejs/server";
 
 const app = vivae();
 
