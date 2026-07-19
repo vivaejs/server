@@ -38,7 +38,6 @@ interface VivaeObject {
   status: number;
 
   send(body: string | object): void;
-  next(error?: any): void;
 
   setHeaders(headers: { [key: string]: string }): void;
 
@@ -48,7 +47,7 @@ interface VivaeObject {
   }): this;
 }
 
-type Middleware = (v: VivaeObject) => void;
+type Middleware = (v: VivaeObject, next: (error?: any) => void) => void;
 
 interface VivaeConfig {
   allowQueries?: boolean;
