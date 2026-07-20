@@ -51,25 +51,19 @@ The route handler defines how your HTTP server handles each path and it's assosi
   - Strict Wildcards `*`: Matches **one or more segments**
   - Dual Wildcards `%` | `**`: Matches **zero or more segments**
 - `METHOD` (optional): The HTTP method, not case sensitive, so it doesn't need to be capitalized. It also supports an array of methods if you want to apply the request to multiple types. See [all HTTP methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods). Defaults to all HTTP methods if it's not given.
-- `MIDDLEWARE` (required): A function that allows you to write middleware, includes `v` object.
+- `MIDDLEWARE` (required): Function that allows you to write middleware with .
 
 ### Example
 
 ```javascript
-[server].use(["GET", "POST"], "/about", (v) => {
-  v.send("Hello World!");
+[server].use(["GET", "POST"], "/about", (v, next) => {
+  return v.send("Hello World!");
 });
 ```
 
 ## Vivae Object
 
-The Vivae Object (`v`) is a unified version of Node.js's `req` and `res` only available when writing middleware. The `v` object can be accessed like this:
-
-```javascript
-[server].use((v) => {
-  // Vivae Object can be used here
-});
-```
+An object that includes information from requests,å only available when writing middleware.
 
 ### `.url`
 
@@ -121,12 +115,6 @@ Example:
 
 ```javascript
 v.send("Hello world!");
-```
-
-### `.next()`
-
-```javascript
-v.next(ERROR);
 ```
 
 ### `.setHeaders()`
