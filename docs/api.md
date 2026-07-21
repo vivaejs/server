@@ -9,32 +9,8 @@ In this documentation, `[server]` will refer to your server instance.
 ```javascript
 import vivae from "vivae";
 
-const app = vivae(config); // [server]
+const app = vivae(); // [server]
 ```
-
-You can modify how your server behaves by passing an object when the instance is created.
-
-### Example
-
-```javascript
-const app = vivae({
-  debug: {
-    logging: false,
-    warnings: false,
-  },
-});
-```
-
-### `.debug`
-
-- `.logging` (optional): When you turn this on it logs every request and prints into the server's terminal. Off by default.
-  - Structure: `[METHOD] [PATH]`
-  - Example: `POST /api/123`
-- `.warnings` (optional): This is great during development, Vivae will give you warnings for things you can fix within your code. On by default.
-
-### `.allowQueries`
-
-Decides if the server should listen to queries. If you were to go to `/about?id=1` it asks the server if that is the same route as `/about`. Otherwise, it'll return the 404 page. Defaults to true.
 
 ## Route Handler - `[server]`.use()
 
