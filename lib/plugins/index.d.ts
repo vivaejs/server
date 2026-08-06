@@ -1,4 +1,4 @@
-import type { Plugin } from "../index";
+import type { Route } from "../index";
 
 export function serve(options?: {
   directory?: string;
@@ -9,6 +9,6 @@ export function serve(options?: {
       [header: string]: string;
     };
   };
-}): Plugin;
+}): Route;
 
-export function logging(): Plugin;
+export function logging(): Route;
