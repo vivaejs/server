@@ -28,8 +28,12 @@ import vivae from "@vivaejs/server";
 const app = vivae();
 const port = 3000;
 
-app.use("/", ["GET", "POST"], (v) => {
-  return v.send("Hello World!");
+app.use({
+  path: "/",
+  method: ["GET", "POST"],
+  middleware: (v) => {
+    return v.send("Hello World!");
+  },
 });
 
 // Node.js

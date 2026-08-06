@@ -14,26 +14,34 @@ const app = vivae(); // [server]
 
 ## Route Handler - `[server]`.use()
 
-The route handler defines how your HTTP server handles each path and it's assosiated method. It accepts three arguments, the path, method and middleware. It can be structured in any way possible but is recommended to be structued like this:
+The route handler defines how your HTTP server handles each path and it's assosiated method. It accepts three arguments, the path, method and middleware.
 
 ```javascript
-[server].use(PATH, METHOD, MIDDLEWARE);
+[server].use({
+  path: "",
+  method: [],
+  middleware: (v) => {},
+});
 ```
 
-- `PATH` (optional): Defines what path on the server to apply to, you can leave it empty to apply to all paths. Supports:
+- `.path` (optional): Defines what path on the server to apply to, you can leave it empty to apply to all paths. Supports:
   - Static Paths: e.g. `/`, `/about`
   - Parameterized paths: e.g. `/user/:id`, `/blog/:post_id`
     - Accessible through [`v.params`](#params)
   - Strict Wildcards `*`: Matches **one or more segments**
   - Dual Wildcards `%` | `**`: Matches **zero or more segments**
-- `METHOD` (optional): The HTTP method, not case sensitive, so it doesn't need to be capitalized. It also supports an array of methods if you want to apply the request to multiple types. See [all HTTP methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods). Defaults to all HTTP methods if it's not given.
-- `MIDDLEWARE` (required): Function that allows you to write middleware with .
+- `.method` (optional): The HTTP method, not case sensitive, so it doesn't need to be capitalized. It also supports an array of methods if you want to apply the request to multiple types. See [all HTTP methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods). Defaults to all HTTP methods if it's not given.
+- `.middleware` (required): Function that allows you to write middleware with .
 
 ### Example
 
 ```javascript
-[server].use(["GET", "POST"], "/about", (v, next) => {
-  return v.send("Hello World!");
+[server].use({
+  path: "/about",
+  method: ["GET", "POST"],
+  middleware: (v, next) => {
+    return v.send("Hello World!");
+  },
 });
 ```
 
@@ -62,8 +70,12 @@ Access the parameters from the current request parsed into an object.
 Get the current request method. Changing it doesn't rewrite the method sent to the server.
 
 ```javascript
-[server].use("/", "GET", (v) => {
-  v.send(v.method); // "GET"
+[server].use({
+  path: "/",
+  method: "GET",
+  middleware: (v) => {
+    v.send(v.method); // "GET"
+  },
 });
 ```
 
@@ -160,11 +172,11 @@ export default myPlugin;
 
 ```javascript
 import vivae from "vivae";
-import { serve } from "vivae/plugins";
+import { serve } from "@vivaejs/server/plugins";
 
 const app = vivae();
 
-app.plugin(serve(OPTIONS));
+app.use(serve(OPTIONS));
 ```
 
 > [!WARNING]
