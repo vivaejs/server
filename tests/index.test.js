@@ -6,8 +6,12 @@ const port = 3000;
 
 const app = vivae();
 
-app.use("/api", "GET", (v) => {
-  return v.send([{ currentPath: v.path }]);
+app.use({
+  path: "/api",
+  method: "GET",
+  middleware: (v) => {
+    return v.send([{ currentPath: v.path }]);
+  },
 });
 
 app.listen(port, () => {

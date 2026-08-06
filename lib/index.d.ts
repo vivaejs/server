@@ -53,18 +53,14 @@ interface VivaeConfig {
   allowQueries?: boolean;
 }
 
-export interface Plugin {
+export interface Route {
   path?: string;
   method?: Method;
   middleware: Middleware;
 }
 
 interface VivaeServer {
-  use(path: string, method: Method | Method[], middleware: Middleware): void;
-  use(path: string, middleware: Middleware): void;
-  use(method: Method | Method[], middleware: Middleware): void;
-  use(middleware: Middleware): void;
-  plugin(plugin: Plugin): void;
+  use(route: Route): void;
 
   fetch: (request: Request) => Promise<Response>;
   listen(port?: number, callback?: () => void): void;
