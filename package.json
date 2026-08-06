@@ -17,6 +17,10 @@
       "import": "./lib/index.js",
       "types": "./lib/index.d.ts"
     },
+    "./routers": {
+      "require": "./lib/routers/index.js",
+      "import": "./lib/routers/index.js"
+    },
     "./plugins": {
       "require": "./lib/plugins/index.js",
       "import": "./lib/plugins/index.js",
