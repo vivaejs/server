@@ -49,8 +49,17 @@ interface VivaeObject {
 
 type Middleware = (v: VivaeObject, next: (error?: any) => void) => void;
 
+interface Router {
+  add(route: Route): void;
+  match(
+    index: number,
+    v: VivaeObject,
+    next: (error?: any) => void,
+  ): Response | Promise<Response> | void;
+}
+
 interface VivaeConfig {
-  allowQueries?: boolean;
+  router?: Router;
 }
 
 export interface Route {
